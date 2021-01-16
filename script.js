@@ -105,7 +105,7 @@ function update(data,type){
         return i * 50;
     })
     .attr("class", "bar")
-    .attr("opacity",.7)
+    .attr("opacity",.85)
     .attr("y", function(d) { return yScale(d['Positive Tests']); })
     .attr("height", function(d) { return height - yScale(d['Positive Tests'])})
     .attr("fill", "maroon")

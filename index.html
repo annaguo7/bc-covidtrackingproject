@@ -27,7 +27,11 @@
     <h1>BC COVID-19 Tracking Project</h1>
     <p>An analysis of BC testing and COVID-19 community positivity rate during the Fall 2020 semester.
     </p>
-    <p>Data Source: <a href="https://www.bc.edu/bc-web/sites/reopening-boston-college.html">BC Reopening Page</a></p>
+    <p>Data Sources: <a href="https://www.bc.edu/bc-web/sites/reopening-boston-college.html">BC Reopening Page</a>,
+    <a href="https://www.bu.edu/healthway/community-dashboard/">BU COVID Dashboard</a>,
+    <a href="https://covidapps.mit.edu/dashboard">MIT COVID App</a>,
+    <a href="https://coronavirus.tufts.edu/testing-metrics">Tufts COVID Dashboard</a>, 
+    <a href="https://news.northeastern.edu/coronavirus/reopening/testing-dashboard/">NEU COVID Dashboard</a></p>
     <hr>
     <div class ="dashboard">
         <h2>Dashboard</h2>
@@ -52,9 +56,10 @@
     </div>
     
     <hr>
-    <h3>BC Weekly Positive Cases in Fall 2020</h3>
 
     <center>
+        <h3>BC Weekly Positive Cases in Fall 2020</h3>
+        <p>*Sorting is shown from left to right →</p>
         <select id="sort-by">
             <option value="Week #">Sort by Date</option>
             <option value="Positive Tests">Sort by # of Positive Tests</option>
@@ -107,8 +112,11 @@
 
     <div class = 'tooltip'></div>
     <hr>
-    <h3>BC Testing Compared to other Boston Universities & Colleges</h3>
+
     <center>        
+        <h3>BC Testing Compared to other Boston Universities & Colleges</h3>
+        <p>*Sorting is shown from left to right →</p>
+
         <select id="group-by">
         <option value="Total Testing">Sort by # of Tests Performed</option>
         <option value="Total Positive">Sort by # of Positive Cases</option>

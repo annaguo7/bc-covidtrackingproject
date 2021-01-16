@@ -29,8 +29,11 @@ h3{
     text-align: center;
     font-weight: bold;
     font-size: 22pt;
-    color: maroon;
+    color: white;
     opacity: .8;
+    background-color: rgba(128, 0, 0, 0.95);
+    padding: 20px;
+    
 }
 
 
@@ -98,7 +101,7 @@ button:hover{
 
 #group-by{
     text-align-last:center; 
-    background-color: rgba(128, 0, 0, 0.7);
+    background-color: rgba(128, 0, 0, 0.85);
     font-weight: 600;
     color: white;
     width: 30%;
@@ -106,7 +109,7 @@ button:hover{
 
 #sort-by{
     text-align-last:center; 
-    background-color: rgba(128, 0, 0, 0.7);
+    background-color: rgba(128, 0, 0, 0.85);
     font-weight: 600;
     color: white;
     width: 30%;
