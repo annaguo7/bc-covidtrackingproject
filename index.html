@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang = 'eng'>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+
+<head>
+        <!-- JS & d3 Files -->
+
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js"></script>
+        <script defer src = "script.js"></script>
+        <script defer src = "boston.js"></script>
+        <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+
+
+        <!-- Milligram CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="style.css">
+        <title>BC COVID Tracking Project</title>
+
+</head>
+
+<body>
+    <center><img src="bc-logo.png" alt=""></center>
+    <h1>BC COVID-19 Tracking Project</h1>
+    <p>An analysis of BC testing and COVID-19 community positivity rate during the Fall 2020 semester.
+    </p>
+    <p>Data Source: <a href="https://www.bc.edu/bc-web/sites/reopening-boston-college.html">BC Reopening Page</a></p>
+    <hr>
+    <div class ="dashboard">
+        <h2>Dashboard</h2>
+        <p class = "dash-descript">(August 16th to December 20th)</p>
+        <div class="row">
+            <div class="column">
+                <b class = "dash-title">Total # of Positive Cases</b>
+                <br>
+                <b class = "dash-num">500</b>
+            </div>
+            <div class="column">
+                <b class = "dash-title">Total # of Tests Performed</b>
+                <br>
+                <b class = "dash-num">139,399</b>
+            </div>
+            <div class="column">
+                <b class = "dash-title">Average Weekly Postivity Rate</b>
+                <br>
+                <b class = "dash-num">0.45%</b>
+        </div>
+      </div>
+    </div>
+    
+    <hr>
+    <h3>BC Weekly Positive Cases in Fall 2020</h3>
+
+    <center>
+        <select id="sort-by">
+            <option value="Week #">Sort by Date</option>
+            <option value="Positive Tests">Sort by # of Positive Tests</option>
+            <option value="BC Positivity Rate">Sort by Weekly Positivity Rate</option>
+        </select>
+        <div class = 'chart'></div>
+
+
+
+        <table class = 'sortable' style="width:80%">
+            <tr>
+              <th class = 'tr-label'>Month ↕</th>
+              <th class = 'tr-label'>Positive Tests ↕</th>
+              <th class = 'tr-label'>Tests Performed ↕</th>
+              <th class = 'tr-label'>Monthly Positivity Rate ↕</th>
+            </tr>
+            <tr>
+              <td>August</td>
+              <td>37</td>
+              <td>22,130</td>
+              <td>0.17%</td>
+            </tr>
+            <tr>
+              <td>September</td>
+              <td>144</td>
+              <td>23,010</td>
+              <td>0.63%</td>
+            </tr>
+            <tr>
+                <td>October</td>
+                <td>70</td>
+                <td>34,089</td>
+                <td>0.21%</td>
+              </tr>
+            <tr>
+              <td>November</td>
+              <td>148</td>
+              <td>37,026</td>
+              <td>0.40%</td>
+            </tr>
+            <tr>
+              <td>December</td>
+              <td>101</td>
+              <td>23,144</td>
+              <td>0.44%</td>
+            </tr>
+          </table>
+    </center>
+
+
+    <div class = 'tooltip'></div>
+    <hr>
+    <h3>BC Testing Compared to other Boston Universities & Colleges</h3>
+    <center>        
+        <select id="group-by">
+        <option value="Total Testing">Sort by # of Tests Performed</option>
+        <option value="Total Positive">Sort by # of Positive Cases</option>
+        <option value="Rate">Sort by Overall Postivity Rate</option>
+        </select>
+    </center>
+    <div class="row">
+        <div class="column">
+
+            <div class = 'boston'></div>
+        </div>
+        <div class="column">
+
+            <div class = 'bubble'></div>
+            <div class = 'tooltipB'></div>
+        </div>
+    </div>
+
+
+    <center>
+
+        <table class = 'sortable' style="width:90%">
+            <tr>
+              <th class = 'tr-label'>University ↕</th>
+              <th class = 'tr-label'>Positive Tests ↕</th>
+              <th class = 'tr-label'>Tests Performed ↕</th>
+              <th class = 'tr-label'>Overall Positivity Rate ↕</th>
+              <th class = 'tr-label'>Days of Testing ↕</th>
+            </tr>
+            <tr>
+              <td>Boston College</td>
+              <td>507</td>
+              <td>140,535</td>
+              <td>0.36%</td>
+              <td>128 days</td>
+            </tr>
+            <tr>
+              <td>Boston University</td>
+              <td>963</td>
+              <td>556,893</td>
+              <td>0.17%</td>
+              <td>171 days</td>
+            </tr>
+            <tr>
+                <td>Tufts University</td>
+                <td>344</td>
+                <td>275,287</td>
+                <td>0.12%</td>
+                <td>163 days</td>
+              </tr>
+            <tr>
+              <td>Northeastern University</td>
+              <td>940</td>
+              <td>565,202</td>
+              <td>0.17%</td>
+              <td>149 days</td>
+            </tr>
+            <tr>
+              <td>MIT</td>
+              <td>481</td>
+              <td>293,980</td>
+              <td>0.16%</td>
+              <td>152 days</td>
+            </tr>
+          </table>
+
+    </center>
+    <hr>
+    
+    
+</body>
+
+</html>
