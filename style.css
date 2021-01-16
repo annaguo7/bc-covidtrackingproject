@@ -124,3 +124,31 @@ table{
     color: maroon;
     font-size: 16pt;
 }
+  
+.BC{
+    background-color: rgba(128, 0, 0, 0.75);
+    color: white;
+}
+
+.tufts{
+    background-color: rgba(135, 207, 235, 0.75);
+}
+
+.BU{
+    background-color: rgba(255, 0, 0, 0.75);
+    color: white;
+}
+
+.NEU{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.MIT{
+    background-color: rgba(178, 34, 34, 0.75);
+    color: white;
+}
+
+tr{
+    height: 80px;
+}

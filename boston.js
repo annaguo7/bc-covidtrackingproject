@@ -76,7 +76,7 @@ function updateZ(data,type){
             .style('opacity',.8)
             .style('padding','10px')
             .style('font-size','10pt')
-            .style("top",pos[1]-2050+'px')
+            .style("top",pos[1]-2250+'px')
             .style("left",pos[0]+'px')
             .html(univ
               + '<br>'+ '<br>'+
@@ -234,7 +234,7 @@ function bubble(data,type){
               .style('opacity',.8)
               .style('padding','5px')
               .style('font-size','10pt')
-              .style("top",(event.pageY-2050) + "px")
+              .style("top",(event.pageY-2250) + "px")
               .style("left",(event.pageX-200) + "px")
               .html(uni
           + '<br>'+ '<br>'+
